@@ -56,7 +56,7 @@ lineDetail.question(`Provide file path for survey form - `, (path) => {
     .createServer(function (request, response) {
       let url = request.url;
 
-      // used to stay of survey page after submitting survey form
+      // used to stay on survey page after submitting survey form
       if (url.includes("/survey")) url = "/survey.html";
 
       response.writeHeader(200, { "Content-Type": "text/html" });
