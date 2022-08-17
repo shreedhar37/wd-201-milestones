@@ -4,11 +4,13 @@
   "description": "",
   "main": "todo.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "cd .. && husky install ./l4/.husky"
   },
   "author": "Shreedhar Chavan <meshree4@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^8.0.1",
     "jest": "^28.1.3"
   }
 }
