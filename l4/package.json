@@ -1,0 +1,14 @@
+{
+  "name": "l4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todo.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Shreedhar Chavan <meshree4@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
+}
