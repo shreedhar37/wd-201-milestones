@@ -8,7 +8,7 @@ const todoList = () => {
     all[index].completed = true;
   };
 
-  const overdue = () => {
+  const overDue = () => {
     return all.filter(
       (item) => item.dueDate < new Date().toLocaleDateString("en-CA")
     );
@@ -25,7 +25,7 @@ const todoList = () => {
       (item) => item.dueDate > new Date().toLocaleDateString("en-CA")
     );
   };
-  return { all, add, markAsComplete, overdue, dueToday, dueLater };
+  return { all, add, markAsComplete, overDue, dueToday, dueLater };
 };
 
 module.exports = todoList;
