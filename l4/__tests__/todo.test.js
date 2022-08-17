@@ -12,4 +12,10 @@ describe("Todo List Test Suite", () => {
 
     expect(all.length).toEqual(1);
   });
+  test("Should mark a Todo as complete", () => {
+    expect(all.length).toEqual(1);
+    expect(all[0].completed).toEqual(false);
+    markAsComplete(0);
+    expect(all[0].completed).toEqual(true);
+  });
 });
