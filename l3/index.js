@@ -1,5 +1,6 @@
 const todoList = () => {
   all = [];
+  currentDate = new Date().toISOString().split("T")[0];
   const add = (todoItem) => {
     all.push(todoItem);
   };
@@ -10,17 +11,17 @@ const todoList = () => {
   const overdue = () => {
     // Write the date check condition here and return the array of overdue items accordingly.
 
-    return all.filter((task) => task.dueDate < today);
+    return all.filter((task) => task.dueDate < currentDate);
   };
 
   const dueToday = () => {
     // Write the date check condition here and return the array of todo items that are due today accordingly.
-    return all.filter((task) => task.dueDate === today);
+    return all.filter((task) => task.dueDate === currentDate);
   };
 
   const dueLater = () => {
     // Write the date check condition here and return the array of todo items that are due later accordingly.
-    return all.filter((task) => task.dueDate > today);
+    return all.filter((task) => task.dueDate > currentDate);
   };
 
   const toDisplayableList = (list) => {
@@ -29,7 +30,7 @@ const todoList = () => {
     let outputString = "";
     list.forEach((task) => {
       outputString += `[${task.completed ? "x" : " "}] ${task.title} ${
-        task.dueDate === today ? "" : task.dueDate
+        task.dueDate === currentDate ? "" : task.dueDate
       }\n`;
     });
     return outputString;
